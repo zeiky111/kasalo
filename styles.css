@@ -53,6 +53,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -63,7 +64,7 @@ body {
     background-color: var(--light-bg);
     overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 /* Remove default input/button styling */
@@ -90,7 +91,7 @@ iframe {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-sm);
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -101,6 +102,8 @@ iframe {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .section-subtitle {
@@ -108,6 +111,8 @@ iframe {
     color: var(--accent-green);
     margin-bottom: var(--spacing-lg);
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* ================ BUTTON STYLES ================ */
@@ -166,7 +171,6 @@ iframe {
     z-index: 1000;
     box-shadow: var(--shadow-md);
     width: 100%;
-    overflow: hidden;
 }
 
 .navbar-content {
@@ -197,6 +201,10 @@ iframe {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: calc(100vw - 150px);
 }
 
 /* Desktop Navigation Links */
@@ -347,6 +355,8 @@ iframe {
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-subtitle {
@@ -354,6 +364,8 @@ iframe {
     margin-bottom: var(--spacing-lg);
     opacity: 0.95;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* ================ ABOUT SECTION ================ */
@@ -375,6 +387,8 @@ iframe {
     font-size: 1.5rem;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-md);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .about-text p {
@@ -382,6 +396,8 @@ iframe {
     font-size: 0.95rem;
     line-height: 1.8;
     color: var(--dark-text);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Features Grid */
@@ -479,7 +495,9 @@ iframe {
     font-size: 1.2rem;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-sm);
-}
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}}
 
 .package-price {
     font-size: 1.3rem;
@@ -575,6 +593,8 @@ iframe {
     margin-bottom: var(--spacing-md);
     font-style: italic;
     line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .reviewer-name {
@@ -640,6 +660,8 @@ iframe {
     margin: 0;
     font-size: 1.1rem;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* ================ SOCIAL MEDIA SECTION ================ */
