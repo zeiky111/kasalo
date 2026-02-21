@@ -24,10 +24,10 @@
 
     /* Spacing */
     --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -76,7 +76,7 @@ input, textarea, select, button {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-sm);
@@ -86,7 +86,7 @@ input, textarea, select, button {
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--accent-green);
     margin-bottom: var(--spacing-lg);
     text-align: center;
@@ -163,15 +163,15 @@ input, textarea, select, button {
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--primary-gold);
+    border: 2px solid var(--primary-gold);
 }
 
 .company-name {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
 }
@@ -259,10 +259,10 @@ input, textarea, select, button {
 .hero {
     background: linear-gradient(135deg, var(--primary-black) 0%, var(--accent-brown) 100%);
     color: var(--light-text);
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     position: relative;
     overflow: hidden;
-    min-height: 70vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,7 +314,7 @@ input, textarea, select, button {
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
@@ -322,7 +322,7 @@ input, textarea, select, button {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     margin-bottom: var(--spacing-lg);
     opacity: 0.95;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -330,7 +330,7 @@ input, textarea, select, button {
 
 /* ================ ABOUT SECTION ================ */
 .about {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background-color: var(--light-bg);
 }
 
@@ -340,14 +340,14 @@ input, textarea, select, button {
 }
 
 .about-text h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-md);
 }
 
 .about-text p {
     margin-bottom: var(--spacing-md);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     color: var(--dark-text);
 }
@@ -362,7 +362,7 @@ input, textarea, select, button {
 
 .feature-card {
     background: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     text-align: center;
     border-left: 4px solid var(--accent-green);
@@ -376,24 +376,25 @@ input, textarea, select, button {
 }
 
 .feature-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
 }
 
 .feature-card h4 {
     color: var(--accent-brown);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: var(--spacing-sm);
 }
 
 .feature-card p {
     color: var(--dark-text);
     margin-bottom: 0;
+    font-size: 0.9rem;
 }
 
 /* ================ MENU SECTION ================ */
 .menu {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background: linear-gradient(180deg, var(--light-bg), white);
 }
 
@@ -406,7 +407,7 @@ input, textarea, select, button {
 
 .menu-card {
     background: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     border: 2px solid var(--gray-light);
     box-shadow: var(--shadow-md);
@@ -440,13 +441,13 @@ input, textarea, select, button {
 }
 
 .package-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-sm);
 }
 
 .package-price {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--primary-gold);
     font-weight: 700;
     margin-bottom: var(--spacing-md);
@@ -482,24 +483,24 @@ input, textarea, select, button {
 .custom-menu-notice {
     background: linear-gradient(135deg, var(--accent-brown), var(--accent-green));
     color: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     text-align: center;
 }
 
 .custom-menu-notice h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: var(--spacing-sm);
 }
 
 .custom-menu-notice p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* ================ REVIEWS SECTION ================ */
 .reviews {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background: linear-gradient(180deg, white, var(--light-bg));
 }
 
@@ -512,7 +513,7 @@ input, textarea, select, button {
 
 .review-card {
     background: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     border-left: 5px solid var(--accent-brown);
     box-shadow: var(--shadow-md);
@@ -531,7 +532,7 @@ input, textarea, select, button {
 }
 
 .review-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--dark-text);
     margin-bottom: var(--spacing-md);
     font-style: italic;
@@ -542,16 +543,17 @@ input, textarea, select, button {
     font-weight: 700;
     color: var(--accent-brown);
     margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
 }
 
 .reviewer-event {
     color: var(--accent-green);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 /* ================ GALLERY SECTION ================ */
 .gallery {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background: linear-gradient(180deg, var(--light-bg), white);
 }
 
@@ -601,7 +603,7 @@ input, textarea, select, button {
 
 /* ================ SOCIAL MEDIA SECTION ================ */
 .social-section {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background: white;
 }
 
@@ -621,26 +623,26 @@ input, textarea, select, button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     text-decoration: none;
     color: white;
     font-weight: 600;
     transition: var(--transition);
-    min-height: 110px;
+    min-height: 100px;
 }
 
 .social-link .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: var(--spacing-sm);
     display: block;
 }
 
 .social-link p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .social-link:nth-child(1) {
@@ -676,7 +678,7 @@ input, textarea, select, button {
 .map-section h3 {
     text-align: center;
     color: var(--accent-brown);
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-bottom: var(--spacing-lg);
 }
 
@@ -688,7 +690,7 @@ input, textarea, select, button {
 
 /* ================ CONTACT SECTION ================ */
 .contact {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background: linear-gradient(180deg, white, var(--light-bg));
 }
 
@@ -702,7 +704,7 @@ input, textarea, select, button {
 
 .contact-form {
     background: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 2px solid var(--primary-gold);
@@ -718,18 +720,19 @@ input, textarea, select, button {
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
     color: var(--accent-brown);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-    padding: var(--spacing-sm);
+    padding: 10px var(--spacing-sm);
     border: 2px solid var(--gray-light);
     border-radius: var(--radius-md);
-    font-size: 1rem;
+    font-size: 16px;
     transition: var(--transition);
     background-color: white;
+    min-height: 44px;
 }
 
 .form-group input:focus,
@@ -833,7 +836,7 @@ input, textarea, select, button {
 .form-note {
     text-align: center;
     color: var(--accent-green);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin-top: var(--spacing-md);
 }
 
@@ -841,33 +844,34 @@ input, textarea, select, button {
 .contact-info {
     background: linear-gradient(135deg, var(--primary-black), var(--accent-brown));
     color: white;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
 }
 
 .contact-info h3 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-bottom: var(--spacing-lg);
     text-align: center;
 }
 
 .info-item {
     display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     align-items: flex-start;
 }
 
 .info-icon {
-    font-size: 1.8rem;
-    min-width: 50px;
+    font-size: 1.5rem;
+    min-width: 40px;
     text-align: center;
 }
 
 .info-label {
     font-weight: 700;
     margin-bottom: 2px;
+    font-size: 0.9rem;
 }
 
 .contact-info a {
@@ -875,6 +879,7 @@ input, textarea, select, button {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
+    font-size: 0.95rem;
 }
 
 .contact-info a:hover {
@@ -906,10 +911,29 @@ input, textarea, select, button {
     text-decoration: underline;
 }
 
+/* ================ SMALL MOBILE BREAKPOINT (480px) ================ */
+@media (min-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
 /* ================ TABLET BREAKPOINT (768px) ================ */
 @media (min-width: 768px) {
     .section-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     /* Navigation - Show desktop menu */
@@ -923,11 +947,15 @@ input, textarea, select, button {
 
     /* Hero Section */
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        min-height: 60vh;
     }
 
     /* About Section */
@@ -975,16 +1003,22 @@ input, textarea, select, button {
 /* ================ DESKTOP BREAKPOINT (1024px) ================ */
 @media (min-width: 1024px) {
     .hero {
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     /* Company name and logo in header */
     .company-name {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        border: 3px solid var(--primary-gold);
     }
 }
 
