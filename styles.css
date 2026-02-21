@@ -127,6 +127,8 @@ iframe {
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .btn-primary {
@@ -159,6 +161,7 @@ iframe {
 .btn-block {
     width: 100%;
     display: block;
+    box-sizing: border-box;
 }
 
 /* ================ NAVBAR ================ */
@@ -204,7 +207,8 @@ iframe {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: calc(100vw - 150px);
+    min-width: 0;
+    flex-shrink: 1;
 }
 
 /* Desktop Navigation Links */
@@ -416,6 +420,8 @@ iframe {
     border-left: 4px solid var(--accent-green);
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -466,6 +472,8 @@ iframe {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-card:hover {
@@ -497,7 +505,7 @@ iframe {
     margin-bottom: var(--spacing-sm);
     word-wrap: break-word;
     overflow-wrap: break-word;
-}}
+}
 
 .package-price {
     font-size: 1.3rem;
@@ -539,6 +547,8 @@ iframe {
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .custom-menu-notice h4 {
@@ -574,6 +584,8 @@ iframe {
     border-left: 5px solid var(--accent-brown);
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .review-card:hover {
@@ -776,7 +788,7 @@ iframe {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .contact-form {
@@ -785,12 +797,16 @@ iframe {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 2px solid var(--primary-gold);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .form-group {
     margin-bottom: var(--spacing-lg);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group label {
@@ -803,6 +819,7 @@ iframe {
 .form-group input,
 .form-group textarea,
 .form-group select {
+    width: 100%;
     padding: 10px var(--spacing-sm);
     border: 2px solid var(--gray-light);
     border-radius: var(--radius-md);
@@ -810,6 +827,7 @@ iframe {
     transition: var(--transition);
     background-color: white;
     min-height: 44px;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -924,6 +942,8 @@ iframe {
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .contact-info h3 {
@@ -937,6 +957,8 @@ iframe {
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
     align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .info-icon {
@@ -988,6 +1010,68 @@ iframe {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* ================ EXTRA SMALL MOBILE (< 380px) ================ */
+@media (max-width: 379px) {
+    :root {
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .company-name {
+        font-size: 0.9rem;
+    }
+
+    .package-name {
+        font-size: 1rem;
+    }
+
+    .package-price {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: 10px 16px;
+    }
 }
 
 /* ================ SMALL MOBILE BREAKPOINT (480px) ================ */
