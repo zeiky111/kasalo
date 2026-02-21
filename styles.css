@@ -122,6 +122,8 @@ section {
     padding-left: var(--spacing-md);
     padding-right: var(--spacing-md);
     box-sizing: border-box;
+    display: block;
+    position: relative;
 }
 .btn {
     display: inline-block;
@@ -281,7 +283,6 @@ section {
     z-index: 999;
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -395,7 +396,8 @@ section {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    box-sizing: border-box;
+}
 }
 
 .about-text h3 {
@@ -421,6 +423,8 @@ section {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .feature-card {
@@ -471,7 +475,8 @@ section {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
-    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-card {
@@ -587,7 +592,8 @@ section {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
-    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .review-card {
@@ -647,7 +653,8 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
-    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .gallery-item {
@@ -706,10 +713,10 @@ section {
     margin-bottom: var(--spacing-xl);
     max-width: 100%;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .social-link {
