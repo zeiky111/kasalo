@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarap Filipino Catering - Authentic Filipino Food for Your Special Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" type="image/jpeg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo-section">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Sarap Filipino Catering Logo" class="logo">
+                    <h1 class="company-name">Sarap Filipino Catering</h1>
+                </div>
+                <nav class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#menu" class="nav-link">Menu</a>
+                    <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#menu" class="mobile-nav-link">Menu</a>
+        <a href="#reviews" class="mobile-nav-link">Reviews</a>
+        <a href="#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Authentic Filipino Flavors for Every Celebration!</h2>
+            <p class="hero-subtitle">From intimate gatherings to grand celebrations, we bring the taste of the Philippines to your table</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Order / Book Now</a>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Sarap Filipino Catering!</h3>
+                    <p>We are a passionate team of Filipino food enthusiasts dedicated to serving authentic, delicious, and affordable catering services for all your special occasions. With over 10 years of experience in the food industry, we've perfected the art of bringing Filipino flavors to every celebration.</p>
+                    <p>Our mission is simple: to make your event memorable through exceptional food, warm service, and the true spirit of Filipino hospitality. From birthday parties to corporate events, weddings, and family reunions, we've got you covered with our mouth-watering dishes and professional catering service.</p>
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon">🍜</div>
+                            <h4>Authentic Recipes</h4>
+                            <p>Traditional Filipino dishes prepared with love and fresh ingredients</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h4>Professional Team</h4>
+                            <p>Experienced catering professionals ensuring smooth event execution</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💚</div>
+                            <h4>Fresh & Quality</h4>
+                            <p>Premium ingredients sourced daily for the freshest flavors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MENU SECTION ==================== -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu Packages</h2>
+            <p class="section-subtitle">Choose from our Popular Filipino Catering Packages</p>
+            <div class="menu-grid">
+                <!-- Package 1 -->
+                <div class="menu-card">
+                    <h3 class="package-name">Classic Filipino Package</h3>
+                    <p class="package-price">₱350 per person</p>
+                    <ul class="menu-items">
+                        <li>Fried Chicken (Pritong Manok)</li>
+                        <li>Pork Adobo</li>
+                        <li>Lumpia (Spring Rolls)</li>
+                        <li>Garlic Fried Rice</li>
+                        <li>Dessert: Leche Flan</li>
+                        <li>Drinks: Calamansi Juice</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="scrollToContact()">Select Package</button>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="menu-card featured">
+                    <span class="badge">Most Popular</span>
+                    <h3 class="package-name">Royal Fiesta Package</h3>
+                    <p class="package-price">₱500 per person</p>
+                    <ul class="menu-items">
+                        <li>Grilled Whole Fish (Tilapia)</li>
+                        <li>Beef Tapa</li>
+                        <li>Lechon Kawali</li>
+                        <li>Pancit Canton</li>
+                        <li>Mixed Vegetables (Tinola)</li>
+                        <li>Fruit Salad</li>
+                        <li>Dessert: Ube Macapuno Cake</li>
+                        <li>Drinks: Mango Juice & Lemonade</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToContact()">Select Package</button>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="menu-card">
+                    <h3 class="package-name">Premium Celebration</h3>
+                    <p class="package-price">₱650 per person</p>
+                    <ul class="menu-items">
+                        <li>Whole Roasted Lechon</li>
+                        <li>Beef Bulalo (Soup)</li>
+                        <li>Shrimp Scampi</li>
+                        <li>Kare-Kare (Peanut Stew)</li>
+                        <li>Lapu-Lapu with Mango Sauce</li>
+                        <li>Fresh Lumpia & Vegetable Rolls</li>
+                        <li>Multiple Desserts & Pastries</li>
+                        <li>Premium Beverages</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="scrollToContact()">Select Package</button>
+                </div>
+            </div>
+
+            <div class="custom-menu-notice">
+                <h4>🌟 Custom Menus Available!</h4>
+                <p>Not finding what you're looking for? We offer customizable menu options tailored to your preferences and budget. Contact us today to discuss your special requirements!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOMER REVIEWS SECTION ==================== -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real Reviews from Real Happy Customers</p>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The food was absolutely delicious! Our guests couldn't stop talking about the lechon and adobo. Sarap Filipino Catering made our anniversary party truly special. Highly recommended!"</p>
+                    <p class="reviewer-name">- Maria Santos</p>
+                    <p class="reviewer-event">Anniversary Party, 150 guests</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Professional, friendly, and the food portion was very generous. We loved their authentic Filipino dishes. The team was punctual and the service was impeccable. Will definitely hire them again!"</p>
+                    <p class="reviewer-name">- Juan Dela Cruz</p>
+                    <p class="reviewer-event">Corporate Event, 200 guests</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Best price and best quality! Our family fiesta was a huge success thanks to their Royal Fiesta Package. The kare-kare was cooked to perfection. Thank you, Sarap!"</p>
+                    <p class="reviewer-name">- Rosa Reyes</p>
+                    <p class="reviewer-event">Family Fiesta, 100 guests</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Outstanding service from start to finish! The food was hot, fresh, and tasted authentic. They went above and beyond to make sure our daughter's birthday was perfect. Salamat!"</p>
+                    <p class="reviewer-name">- Pedro Garcia</p>
+                    <p class="reviewer-event">Birthday Celebration, 80 guests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Food & Events Gallery</h2>
+            <p class="section-subtitle">See Our Delicious Creations</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Lechon - Roasted Pig">
+                    <h4>Authentic Lechon</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Pork Adobo">
+                    <h4>Savory Pork Adobo</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Kare-Kare">
+                    <h4>Creamy Kare-Kare</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Lumpia">
+                    <h4>Crispy Lumpia</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Sinigang">
+                    <h4>Hearty Sinigang</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Event Setup">
+                    <h4>Event Catering Setup</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOCIAL MEDIA SECTION ==================== -->
+    <section id="social" class="social-section">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Social Media</h2>
+            <p class="section-subtitle">Stay Updated with Our Latest Offerings and Food Posts</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/zei.744188" class="social-link" target="_blank" aria-label="Facebook">
+                    <span class="icon">f</span>
+                    <p>Facebook</p>
+                </a>
+                <a href="https://instagram.com" class="social-link" target="_blank" aria-label="Instagram">
+                    <span class="icon">📷</span>
+                    <p>Instagram</p>
+                </a>
+                <a href="https://tiktok.com" class="social-link" target="_blank" aria-label="TikTok">
+                    <span class="icon">🎵</span>
+                    <p>TikTok</p>
+                </a>
+                <a href="https://youtube.com" class="social-link" target="_blank" aria-label="YouTube">
+                    <span class="icon">▶</span>
+                    <p>YouTube</p>
+                </a>
+                <a href="tel:+639123456789" class="social-link" aria-label="Call Us">
+                    <span class="icon">☎</span>
+                    <p>Call Us</p>
+                </a>
+            </div>
+
+            <!-- Location Map -->
+            <div class="map-section">
+                <h3>Visit Our Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2449607969497!2d121.0066477!3d14.5577271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b8b8b8b8b8b9%3A0x0!2sManila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1613500000000" 
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT/BOOKING SECTION ==================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Book Your Event Now</h2>
+            <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            
+            <div class="contact-wrapper">
+                <form id="contactForm" action="https://formsubmit.co/detorresniezskye@gmail.com" method="POST" class="contact-form" novalidate>
+                    <!-- Security: Disable CAPTCHA -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            placeholder="e.g., Juan Dela Cruz"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phoneNumber" 
+                            name="phoneNumber" 
+                            placeholder="e.g., +63 912 345 6789"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="phoneNumberError"></span>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="e.g., juan@example.com"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Event Date -->
+                    <div class="form-group">
+                        <label for="eventDate">Event Date *</label>
+                        <input 
+                            type="date" 
+                            id="eventDate" 
+                            name="eventDate"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="eventDateError"></span>
+                    </div>
+
+                    <!-- Event Time -->
+                    <div class="form-group">
+                        <label for="eventTime">Event Time *</label>
+                        <input 
+                            type="time" 
+                            id="eventTime" 
+                            name="eventTime"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="eventTimeError"></span>
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div class="form-group">
+                        <label for="numGuests">Number of Guests *</label>
+                        <input 
+                            type="number" 
+                            id="numGuests" 
+                            name="numGuests" 
+                            placeholder="e.g., 100"
+                            min="10"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="numGuestsError"></span>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address (optional)</label>
+                        <input 
+                            type="text" 
+                            id="deliveryAddress" 
+                            name="deliveryAddress" 
+                            placeholder="e.g., 123 Main St, BGC, Taguig"
+                        >
+                    </div>
+
+                    <!-- How did you hear about us? -->
+                    <div class="form-group">
+                        <label for="hearAbout">How did you hear about us? *</label>
+                        <select 
+                            id="hearAbout" 
+                            name="hearAbout"
+                            required
+                            aria-required="true"
+                        >
+                            <option value="">-- Select an option --</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="friend">Friend or Family Recommendation</option>
+                            <option value="google">Google Search</option>
+                            <option value="event">Past Event / Word of Mouth</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="hearAboutError"></span>
+                    </div>
+
+                    <!-- Questions / Additional Details -->
+                    <div class="form-group">
+                        <label for="additionalDetails">Questions / Additional Details</label>
+                        <textarea 
+                            id="additionalDetails" 
+                            name="additionalDetails" 
+                            placeholder="Tell us about any dietary requirements, preferences, or special requests..."
+                            rows="5"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send Booking Inquiry</button>
+                    <p class="form-note">We promise we won't spam. You'll only hear from us about your event.</p>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <p class="info-label">Phone:</p>
+                            <p><a href="tel:+639123456789">+63 912 345 6789</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <p class="info-label">Email:</p>
+                            <p><a href="mailto:info@sarapfilipino.com">info@sarapfilipino.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <p class="info-label">Address:</p>
+                            <p>123 Catering Street<br>Manila, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <p class="info-label">Business Hours:</p>
+                            <p>Monday - Friday: 9:00 AM - 8:00 PM<br>
+                               Saturday: 10:00 AM - 9:00 PM<br>
+                               Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sarap Filipino Catering. All rights reserved. | Made with ❤️ for Filipino celebrations</p>
+            <p class="footer-links">
+                <a href="#home">Privacy Policy</a> | 
+                <a href="#home">Terms of Service</a> | 
+                <a href="#contact">Contact Us</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
