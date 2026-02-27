@@ -85,7 +85,13 @@ iframe {
     max-width: 100%;
 }
 
-/* ================ UTILITY CLASSES ================ */
+header.navbar .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
     width: 100%;
     max-width: 100%;
@@ -185,6 +191,7 @@ section {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
+    display: block;
 }
 
 .navbar-content {
@@ -194,6 +201,9 @@ section {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .logo-section {
@@ -201,6 +211,8 @@ section {
     align-items: center;
     gap: var(--spacing-sm);
     flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -555,6 +567,28 @@ section {
 
 .menu-card .btn {
     margin-top: auto;
+}
+
+/* Menu Notes Section */
+.menu-notes {
+    background: rgba(212, 175, 55, 0.1);
+    border: 2px solid var(--primary-gold);
+    color: var(--dark-text);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.menu-notes p {
+    margin: var(--spacing-sm) 0;
+    line-height: 1.5;
+}
+
+.menu-notes p:last-child {
+    margin-bottom: 0;
 }
 
 /* Custom Menu Notice */
@@ -1036,7 +1070,13 @@ section {
     text-decoration: underline;
 }
 
-/* ================ EXTRA SMALL MOBILE (< 380px) ================ */
+footer.footer .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 380px) ================ */
 @media (max-width: 379px) {
     :root {
         --spacing-xs: 0.25rem;
