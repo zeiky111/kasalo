@@ -1975,16 +1975,67 @@ footer.footer .container {
 
 /* Keep sticker accents subtle on small screens */
 @media (max-width: 767px) {
-    .banderitas,
-    .fiesta-lights,
-    .fiesta-sticker,
+    .banderitas {
+        height: 38px;
+        opacity: 0.8;
+    }
+
+    .fiesta-lights {
+        height: 24px;
+        opacity: 0.8;
+    }
+
+    .fiesta-sticker {
+        display: flex;
+        font-size: 0.58rem;
+        padding: 0.24rem 0.45rem;
+        max-width: min(46vw, 170px);
+        min-height: 34px;
+        border-width: 2px;
+        letter-spacing: 0.4px;
+        gap: 0.3rem;
+        z-index: 2;
+    }
+
+    .fiesta-sticker::before,
+    .fiesta-sticker::after {
+        top: -16px;
+        height: 16px;
+        width: 2px;
+    }
+
+    .fiesta-sticker-icon {
+        font-size: 0.82rem;
+        margin-right: 0.15rem;
+    }
+
+    .sticker-hero-left,
+    .sticker-about-left,
+    .sticker-menu-left,
+    .sticker-reviews-left,
+    .sticker-gallery-left,
+    .sticker-contact-left {
+        top: 52px;
+        left: 6px;
+        transform: rotate(-5deg);
+    }
+
     .sticker-hero-right,
     .sticker-about-right,
     .sticker-menu-right,
     .sticker-reviews-right,
-    .sticker-gallery-right,
+    .sticker-gallery-right {
+        display: flex;
+        top: 52px;
+        right: 6px;
+        transform: rotate(5deg);
+    }
+
     .section-title::before {
-        display: none;
+        display: block;
+        top: -20px;
+        font-size: 0.65rem;
+        opacity: 0.45;
     }
 
     section {
@@ -2002,7 +2053,7 @@ footer.footer .container {
 
     .company-name {
         font-size: 1.05rem;
-        max-width: 140px;
+        max-width: 170px;
     }
 
     .hero {
@@ -2063,7 +2114,20 @@ footer.footer .container {
 
     .menu-card::before,
     .menu-card::after {
-        display: none;
+        display: block;
+    }
+
+    .menu-card::before {
+        width: 22px;
+        height: 22px;
+        top: 10px;
+        right: 10px;
+        opacity: 0.4;
+    }
+
+    .menu-card::after {
+        inset: 8px;
+        border-width: 1px;
     }
 
     .package-name {
@@ -2092,7 +2156,19 @@ footer.footer .container {
 
     .menu-category::before,
     .menu-category::after {
-        display: none;
+        display: block;
+    }
+
+    .menu-category::before {
+        width: 46px;
+        height: 12px;
+        top: -6px;
+    }
+
+    .menu-category::after {
+        width: 30px;
+        height: 2px;
+        top: -2px;
     }
 
     .category-title {
