@@ -1,5 +1,5 @@
 /* ========================================
-   SARAP FILIPINO CATERING - JAVASCRIPT
+   KASALO - JAVASCRIPT
    Form Validation, Mobile Menu, Smooth Scrolling
    ======================================== */
 
@@ -57,7 +57,7 @@ if (contactForm) {
             // Submit to FormSubmit.co via fetch (no page redirect)
             const formData = new FormData(contactForm);
             
-            fetch('https://formsubmit.co/detorresniezskye@gmail.com', {
+            fetch('https://formsubmit.co/kasalopinoy@gmail.com', {
                 method: 'POST',
                 body: formData
             })
