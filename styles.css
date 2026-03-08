@@ -1522,7 +1522,7 @@ section > .container {
 }
 
 /* Responsive for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 821px) {
     .menu-catalog {
         grid-template-columns: 1fr 1fr;
     }
@@ -1793,7 +1793,7 @@ section > .container {
 }
 
 /* Tablet & Desktop - Larger popup */
-@media (min-width: 768px) {
+@media (min-width: 821px) {
     .success-message-content {
         max-width: 400px;
         padding: var(--spacing-xl);
@@ -1973,8 +1973,8 @@ footer.footer .container {
     }
 }
 
-/* Keep sticker accents subtle on small screens */
-@media (max-width: 767px) {
+/* Keep sticker accents subtle on phones and small tablets */
+@media (max-width: 820px) {
     .banderitas {
         height: 38px;
         opacity: 0.8;
@@ -2058,8 +2058,13 @@ footer.footer .container {
 
     .hero {
         min-height: auto;
-        padding-top: 3.25rem;
+        padding-top: 5.25rem;
         padding-bottom: 2.5rem;
+    }
+
+    .hero .sticker-hero-left,
+    .hero .sticker-hero-right {
+        display: none;
     }
 
     .hero-content {
@@ -2248,8 +2253,8 @@ footer.footer .container {
     }
 }
 
-/* ================ TABLET BREAKPOINT (768px) ================ */
-@media (min-width: 768px) {
+/* ================ TABLET BREAKPOINT (821px) ================ */
+@media (min-width: 821px) {
     .section-title {
         font-size: 2.5rem;
     }
@@ -2327,6 +2332,17 @@ footer.footer .container {
     .sticker-menu-left { left: 22px; }
     .sticker-reviews-left { left: 22px; }
     .sticker-gallery-left { left: 22px; }
+}
+
+/* Keep key form/social blocks stacked on mobile and small-tablet sizes */
+@media (max-width: 820px) {
+    .date-time-group {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ================ DESKTOP BREAKPOINT (1024px) ================ */
