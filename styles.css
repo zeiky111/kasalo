@@ -2064,11 +2064,23 @@ footer.footer .container {
 
     .hero .sticker-hero-left,
     .hero .sticker-hero-right {
-        display: none;
+        display: flex;
+        top: 56px;
+        transform: rotate(0deg);
+        z-index: 4;
+    }
+
+    .hero .sticker-hero-left {
+        left: 8px;
+    }
+
+    .hero .sticker-hero-right {
+        right: 8px;
     }
 
     .hero-content {
         max-width: 100%;
+        margin-top: 2.6rem;
     }
 
     .hero-title {
