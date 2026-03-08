@@ -99,19 +99,19 @@ if (contactForm) {
  * @returns {boolean} - True if all fields are valid
  */
 function validateForm() {
-    const fullName = document.getElementById('fullName');
+    const name = document.getElementById('name');
     const phoneNumber = document.getElementById('phoneNumber');
     const email = document.getElementById('email');
     const eventDate = document.getElementById('eventDate');
     const eventTime = document.getElementById('eventTime');
-    const numGuests = document.getElementById('numGuests');
+    const deliveryPickup = document.getElementById('deliveryPickup');
     const hearAbout = document.getElementById('hearAbout');
 
     let isValid = true;
 
-    // Validate Full Name
-    if (!validateFullName(fullName)) {
-        showError(fullName, 'fullNameError', 'Please enter a valid full name (at least 3 characters)');
+    // Validate Name
+    if (!validateName(name)) {
+        showError(name, 'nameError', 'Please enter a valid name (at least 3 characters)');
         isValid = false;
     }
 
@@ -134,14 +134,14 @@ function validateForm() {
     }
 
     // Validate Event Time
-    if (!eventTime.value) {
+    if (!eventTime || !eventTime.value) {
         showError(eventTime, 'eventTimeError', 'Please select an event time');
         isValid = false;
     }
 
-    // Validate Number of Guests
-    if (!validateNumGuests(numGuests)) {
-        showError(numGuests, 'numGuestsError', 'Please enter a number of guests (minimum 10)');
+    // Validate Delivery or Pickup
+    if (!deliveryPickup || !deliveryPickup.value) {
+        showError(deliveryPickup, 'deliveryPickupError', 'Please select delivery or pickup');
         isValid = false;
     }
 
@@ -159,13 +159,17 @@ function validateForm() {
  * @param {HTMLElement} field - The form field to validate
  */
 function validateField(field) {
+    if (!field) {
+        return false;
+    }
+
     let isValid = false;
 
     switch (field.id) {
-        case 'fullName':
-            isValid = validateFullName(field);
+        case 'name':
+            isValid = validateName(field);
             if (!isValid) {
-                showError(field, 'fullNameError', 'Please enter a valid full name (at least 3 characters)');
+                showError(field, 'nameError', 'Please enter a valid name (at least 3 characters)');
             }
             break;
         case 'phoneNumber':
@@ -192,10 +196,10 @@ function validateField(field) {
                 showError(field, 'eventTimeError', 'Please select an event time');
             }
             break;
-        case 'numGuests':
-            isValid = validateNumGuests(field);
+        case 'deliveryPickup':
+            isValid = field.value !== '';
             if (!isValid) {
-                showError(field, 'numGuestsError', 'Please enter a number of guests (minimum 10)');
+                showError(field, 'deliveryPickupError', 'Please select delivery or pickup');
             }
             break;
         case 'hearAbout':
@@ -217,6 +221,10 @@ function validateField(field) {
 function validateFullName(field) {
     const value = field.value.trim();
     return value.length >= 3 && /^[a-zA-Z\s'-]+$/.test(value);
+}
+
+function validateName(field) {
+    return validateFullName(field);
 }
 
 /**
@@ -247,6 +255,10 @@ function validateEmail(field) {
  * @returns {boolean} - True if valid
  */
 function validateEventDate(field) {
+    if (!field) {
+        return false;
+    }
+
     const value = field.value;
     if (!value) {
         return false;
@@ -276,11 +288,18 @@ function validateNumGuests(field) {
  * @param {string} message - The error message to display
  */
 function showError(field, errorElementId, message) {
+    if (!field) {
+        return;
+    }
+
     field.classList.add('error');
+    field.setAttribute('aria-invalid', 'true');
     const errorElement = document.getElementById(errorElementId);
     if (errorElement) {
         errorElement.textContent = message;
         errorElement.classList.add('show');
+    } else {
+        field.setAttribute('title', message);
     }
 }
 
@@ -298,6 +317,8 @@ function clearAllErrors() {
 
     errorFields.forEach(element => {
         element.classList.remove('error');
+        element.removeAttribute('aria-invalid');
+        element.removeAttribute('title');
     });
 }
 

@@ -104,9 +104,9 @@ header.navbar .container {
 }
 .container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 clamp(0.75rem, 2vw, 1.5rem);
     box-sizing: border-box;
 }
 
@@ -308,10 +308,11 @@ section > .container {
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    white-space: nowrap;
+    white-space: normal;
     flex-wrap: wrap;
     min-width: 100px;
     min-height: 55px;
+    max-width: min(42vw, 230px);
     filter: contrast(1.05) brightness(1.02);
 }
 
@@ -680,7 +681,7 @@ section > .container {
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 70px;
+    top: 76px;
     left: 0;
     right: 0;
     background: linear-gradient(135deg, var(--deep-brown), var(--bamboo-brown));
@@ -690,6 +691,8 @@ section > .container {
     z-index: 999;
     width: 100%;
     max-width: 100%;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
     box-sizing: border-box;
 }
 
@@ -775,7 +778,7 @@ section > .container {
     position: relative;
     z-index: 10;
     text-align: center;
-    max-width: 90%;
+    max-width: 760px;
     width: 100%;
 }
 
@@ -1701,6 +1704,12 @@ section > .container {
     box-sizing: border-box;
 }
 
+.date-time-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
@@ -1890,7 +1899,9 @@ footer.footer .container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} 380px) ================ */
+}
+
+/* ================ EXTRA SMALL DEVICES (< 380px) ================ */
 @media (max-width: 379px) {
     :root {
         --spacing-xs: 0.25rem;
@@ -1958,6 +1969,7 @@ footer.footer .container {
     .fiesta-sticker {
         font-size: 0.64rem;
         padding: 0.28rem 0.55rem;
+        max-width: min(56vw, 210px);
     }
 }
 
@@ -1973,6 +1985,13 @@ footer.footer .container {
 
     .fiesta-sticker {
         opacity: 0.92;
+        max-width: min(54vw, 220px);
+    }
+
+    .menu-card:hover,
+    .dish-item:hover,
+    .social-link:hover {
+        transform: none;
     }
 }
 
@@ -1992,6 +2011,14 @@ footer.footer .container {
 
     .container {
         padding: 0 1rem;
+    }
+
+    .date-time-group {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .social-icons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -2025,12 +2052,12 @@ footer.footer .container {
 
     /* About Section */
     .features {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     /* Menu Section */
     .menu-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     /* Reviews Section */
@@ -2053,7 +2080,7 @@ footer.footer .container {
 
     /* Contact Section */
     .contact-wrapper {
-        grid-template-columns: 1fr 400px;
+        grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
 
@@ -2095,6 +2122,19 @@ footer.footer .container {
         width: 50px;
         height: 50px;
         border: 3px solid var(--primary-gold);
+    }
+
+    .features {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-wrapper {
+        grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+        align-items: start;
     }
 }
 
