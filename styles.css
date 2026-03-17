@@ -878,14 +878,28 @@ main {
 }
 
 @media (max-width: 1024px) {
+    .section-with-placards {
+        --placard-lane: 0px;
+    }
+
     .section-with-placards .content-wrap,
     .section-with-placards .menu-shell,
     .section-with-placards .gallery-shell,
     .section-with-placards .contact-shell {
-        width: min(1040px, 90vw);
+        width: min(1120px, 92vw);
     }
 
     .section-placard {
+        display: block;
+        position: static;
+        width: min(220px, 78vw);
+        min-height: 96px;
+        margin: 10px auto 0;
+        transform: none;
+    }
+
+    .section-placard::before,
+    .section-placard::after {
         display: none;
     }
 }
