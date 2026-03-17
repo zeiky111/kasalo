@@ -481,7 +481,7 @@ main {
 
 .delivery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
 
@@ -880,6 +880,10 @@ main {
 @media (max-width: 1024px) {
     .section-with-placards {
         --placard-lane: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .section-with-placards .content-wrap,
@@ -889,13 +893,35 @@ main {
         width: min(1120px, 92vw);
     }
 
+    .section-with-placards > .content-wrap,
+    .section-with-placards > .menu-shell,
+    .section-with-placards > .gallery-shell,
+    .section-with-placards > .contact-shell {
+        order: 2;
+    }
+
     .section-placard {
-        display: block;
-        position: static;
+        display: grid !important;
+        place-items: center;
+        position: static !important;
         width: min(220px, 78vw);
         min-height: 96px;
-        margin: 10px auto 0;
-        transform: none;
+        margin: 0 auto;
+        transform: none !important;
+        order: 1;
+    }
+
+    .section-placard.left,
+    .section-placard.right {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .section-placard.high,
+    .section-placard.mid,
+    .section-placard.low {
+        top: auto !important;
     }
 
     .section-placard::before,
@@ -1026,12 +1052,20 @@ main {
 
     .menu-left {
         padding: 12px 10px 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Keep menu pricing readable on small screens by avoiding tight column squeeze. */
+    .menu-block,
+    .menu-footnote {
+        min-width: 560px;
     }
 
     .menu-head,
     .menu-line {
-        grid-template-columns: minmax(0, 1fr) 42px 42px 42px 42px;
-        gap: 4px;
+        grid-template-columns: minmax(170px, 1fr) 56px 56px 56px 56px;
+        gap: 8px;
     }
 
     .menu-head h3 {
@@ -1040,11 +1074,17 @@ main {
 
     .menu-head span,
     .menu-line span {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .one-col {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .one-col span:last-child {
+        text-align: left;
+        color: #ffe3a3;
     }
 
     .gallery-shell h2 {
@@ -1095,12 +1135,17 @@ main {
 
     .menu-head,
     .menu-line {
-        grid-template-columns: minmax(0, 1fr) 38px 38px 38px 38px;
-        gap: 2px;
+        grid-template-columns: minmax(150px, 1fr) 48px 48px 48px 48px;
+        gap: 6px;
     }
 
     .menu-head span,
     .menu-line span {
-        font-size: 11px;
+        font-size: 12px;
+    }
+
+    .menu-block,
+    .menu-footnote {
+        min-width: 520px;
     }
 }
