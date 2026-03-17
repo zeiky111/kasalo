@@ -364,11 +364,13 @@ main {
 }
 
 .packages-copy {
-    background: linear-gradient(160deg, #ffefc9, #ffd487 65%, #f4ba59 100%);
-    border: 1px solid rgba(121, 72, 11, 0.2);
+    background:
+        radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.45) 0 72px, transparent 73px),
+        linear-gradient(155deg, #fbe59c, #f4cc57 68%, #ebbf47 100%);
+    border: 1px solid rgba(0, 0, 0, 0.14);
     border-radius: 16px;
     padding: clamp(18px, 2vw, 28px);
-    box-shadow: 0 10px 20px rgba(72, 43, 13, 0.14);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.13);
 }
 
 .black-button {
@@ -402,55 +404,70 @@ main {
 }
 
 .pkg-detail-card {
-    background: linear-gradient(180deg, #fff8ea, #f6edd9);
-    color: #1a1a1a;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    --pkg-accent: #f2cb53;
+    --pkg-bg: #fff8e7;
+    background: var(--pkg-bg);
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.16);
     padding: 18px 18px 16px;
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.13);
 }
 
-.packages-row .pkg-detail-card:nth-of-type(2) {
-    background: linear-gradient(180deg, #fff3dc, #f6e2bd);
+.packages-row .pkg-detail-card:nth-child(2) {
+    --pkg-accent: #f2cb53;
+    --pkg-bg: #fff8e7;
 }
 
-.packages-row .pkg-detail-card:nth-of-type(3) {
-    background: linear-gradient(180deg, #f9f2de, #efe2be);
+.packages-row .pkg-detail-card:nth-child(3) {
+    --pkg-accent: #efbf55;
+    --pkg-bg: #fff4e4;
 }
 
-.packages-row .pkg-detail-card:nth-of-type(4) {
-    background: linear-gradient(180deg, #fef7e5, #f5e6c7);
+.packages-row .pkg-detail-card:nth-child(4) {
+    --pkg-accent: #ebbc63;
+    --pkg-bg: #fff6e9;
 }
 
 .pkg-detail-card h4 {
-    margin: 0;
+    margin: 0 0 10px;
     font-family: "Playfair Display", serif;
     font-size: clamp(26px, 1.7vw, 34px);
-    line-height: 1.08;
-    color: #8b5717;
-    padding-bottom: 8px;
-    border-bottom: 2px solid rgba(139, 87, 23, 0.24);
+    line-height: 1.12;
+    color: #111;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fdecae, var(--pkg-accent));
+    border: 1px solid rgba(0, 0, 0, 0.14);
 }
 
 .pkg-list {
     margin: 14px 0 0;
     padding-left: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
     display: grid;
     gap: 7px;
+    background: rgba(246, 216, 114, 0.28);
+    border-radius: 10px;
 }
 
 .pkg-list li {
     font-size: clamp(16px, 1.02vw, 18px);
     line-height: 1.34;
+    color: #141414;
 }
 
 .pkg-free {
     margin: auto 0 0;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0, 0, 0, 0.18);
-    color: #7a3e00;
+    padding: 10px 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, #f8d65c, #f1c13f);
+    border-radius: 10px;
+    color: #1a1204;
     font-size: clamp(16px, 1vw, 19px);
     font-weight: 700;
 }
@@ -475,21 +492,34 @@ main {
 
 .packages-notes {
     margin-top: 18px;
-    padding: 16px 18px;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-left: 6px solid #b67821;
-    border-radius: 12px;
-    background: #fbf3df;
+    padding: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #fff8e8 0%, #f8ecd0 100%);
+    box-shadow: 0 8px 14px rgba(42, 28, 8, 0.08);
+    display: grid;
+    gap: 10px;
 }
 
 .packages-notes p {
     margin: 0;
-    font-size: clamp(14px, 0.9vw, 17px);
-    line-height: 1.4;
+    font-size: clamp(14px, 0.95vw, 17px);
+    line-height: 1.46;
+    color: #21180d;
+    background: rgba(255, 232, 162, 0.45);
+    border: 1px solid rgba(146, 102, 31, 0.18);
+    border-left: 4px solid #d6a235;
+    border-radius: 10px;
+    padding: 10px 12px;
 }
 
 .packages-notes p + p {
-    margin-top: 8px;
+    margin-top: 0;
+}
+
+.packages-notes strong {
+    color: #5a3608;
+    font-size: clamp(14px, 1vw, 18px);
 }
 
 .delivery-section {
@@ -775,10 +805,19 @@ main {
 
 .footer-links a,
 .footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: #f6e9cc;
     text-decoration: none;
     font-weight: 600;
     width: fit-content;
+}
+
+.social-icon-footer {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
 }
 
 .footer-links a:hover,
@@ -834,6 +873,25 @@ main {
 
 .swing-card a:hover {
     opacity: 0.7;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    opacity: 0.75;
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .form-card form {
