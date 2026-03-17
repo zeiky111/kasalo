@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
+    // Skip mobile menu logic when markup is not present on the page.
+    if (!mobileMenuBtn || !mobileMenu) {
+        return;
+    }
+
     // Toggle mobile menu when hamburger button is clicked
     mobileMenuBtn.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
@@ -40,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
+    // Ensure FormSubmit gets a proper absolute URL for redirect after submit.
+    const nextInput = contactForm.querySelector('input[name="_next"]');
+    if (nextInput && !/^https?:\/\//i.test(nextInput.value)) {
+        nextInput.value = window.location.origin + window.location.pathname + '#contact';
+    }
+
     // Form submit handler
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault(); // Prevent default form submission
@@ -51,26 +62,8 @@ if (contactForm) {
         const isValid = validateForm();
         
         if (isValid) {
-            // Show success message first
-            showSuccessMessage();
-            
-            // Submit to FormSubmit.co via fetch (no page redirect)
-            const formData = new FormData(contactForm);
-            
-            fetch('https://formsubmit.co/kasalopinoy@gmail.com', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                console.log('Form submitted successfully!', response);
-                // Reset form after successful submission
-                contactForm.reset();
-            })
-            .catch(error => {
-                console.log('Form submission error:', error);
-                // Still show success even if there's an error
-                // (FormSubmit.co is very reliable)
-            });
+            // Submit directly to FormSubmit for the most reliable delivery.
+            contactForm.submit();
         }
     });
 
@@ -100,7 +93,7 @@ if (contactForm) {
  */
 function validateForm() {
     const name = document.getElementById('name');
-    const phoneNumber = document.getElementById('phoneNumber');
+    const phoneNumber = document.getElementById('phone');
     const email = document.getElementById('email');
     const eventDate = document.getElementById('eventDate');
     const eventTime = document.getElementById('eventTime');
@@ -173,9 +166,10 @@ function validateField(field) {
             }
             break;
         case 'phoneNumber':
+        case 'phone':
             isValid = validatePhoneNumber(field);
             if (!isValid) {
-                showError(field, 'phoneNumberError', 'Please enter a valid phone number');
+                showError(field, 'phoneError', 'Please enter a valid phone number');
             }
             break;
         case 'email':
