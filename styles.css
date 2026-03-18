@@ -443,11 +443,40 @@ main {
 }
 
 @media (max-width: 760px) {
-    .hero-logo {
-        height: 54px;
-        top: 10px;
-        left: 10px;
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
+    }
+@media (max-width: 600px) {
+    .quick-links-shell {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .feature-image-wrap {
+        height: 160px;
+    }
+    .feature-copy h3 {
+        font-size: 18px;
+        word-break: break-word;
+    }
+    .feature-copy p, .feature-note {
+        font-size: 13px;
+        word-break: break-word;
+    }
+    .footer-column {
+        padding: 10px 4px;
+    }
+    .footer-link-item, .footer-contact-item, .delivery-link-copy {
+        font-size: 11.5px;
+        line-height: 1.25;
+        word-break: break-word;
+        white-space: normal;
+    }
+    .footer-column h4, .footer-column h3 {
+        font-size: 14px;
+    }
+}
 
     .hero-menu-icon {
         font-size: 40px;
