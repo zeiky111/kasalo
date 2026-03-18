@@ -89,7 +89,7 @@ if (contactForm) {
         }
 
         // Submit via FormSubmit AJAX endpoint (no redirect)
-        const submitUrl = 'https://formsubmit.co/ajax/detorresniezlskye@gmail.com';
+        const submitUrl = 'https://formsubmit.co/ajax/kasalopinoy@gmail.com';
         const formData = new FormData(contactForm);
 
         try {
