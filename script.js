@@ -65,18 +65,64 @@ if (contactForm) {
     }
 
     // Form submit handler
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault(); // Prevent default form submission
-        
+
+        const statusEl = document.getElementById('formStatus');
+        if (statusEl) {
+            statusEl.textContent = '';
+            statusEl.className = 'form-status';
+        }
+
         // Clear all previous error states
         clearAllErrors();
-        
+
         // Validate all fields
         const isValid = validateForm();
-        
-        if (isValid) {
-            // Submit directly to FormSubmit for the most reliable delivery.
-            contactForm.submit();
+
+        if (!isValid) {
+            if (statusEl) {
+                statusEl.textContent = 'Please fix the highlighted fields and try again.';
+                statusEl.classList.add('error');
+            }
+            return;
+        }
+
+        // Submit via FormSubmit AJAX endpoint (no redirect)
+        const submitUrl = 'https://formsubmit.co/ajax/kasalopinoy@gmail.com';
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(submitUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (statusEl) {
+                    statusEl.textContent = 'Your inquiry was sent successfully. Thank you!';
+                    statusEl.classList.add('success');
+                }
+                contactForm.reset();
+            } else {
+                const errorData = await response.json().catch(() => null);
+                if (statusEl) {
+                    statusEl.textContent = 'There was an issue sending your inquiry. Please try again.';
+                    if (errorData && errorData.message) {
+                        statusEl.textContent += ' (' + errorData.message + ')';
+                    }
+                    statusEl.classList.add('error');
+                }
+            }
+        } catch (error) {
+            if (statusEl) {
+                statusEl.textContent = 'Network error. Please check your connection and try again.';
+                statusEl.classList.add('error');
+            }
         }
     });
 
