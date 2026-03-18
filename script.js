@@ -5,38 +5,51 @@
 
 // ================ MOBILE MENU TOGGLE ================
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuBtn = document.querySelector('.hero-menu-icon');
     const mobileMenu = document.getElementById('mobileMenu');
+    if (!mobileMenuBtn || !mobileMenu) return;
 
-    // Skip mobile menu logic when markup is not present on the page.
-    if (!mobileMenuBtn || !mobileMenu) {
-        return;
-    }
-
-    // Toggle mobile menu when hamburger button is clicked
+    // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
-        // Change button appearance (optional)
+        mobileMenu.style.display = mobileMenu.classList.contains('active') ? 'flex' : 'none';
         mobileMenuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
     });
 
-    // Close mobile menu when a nav link is clicked
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    // Dropdown submenu toggle
+    const submenuToggle = mobileMenu.querySelector('.submenu-toggle');
+    const submenuParent = submenuToggle ? submenuToggle.closest('li') : null;
+    if (submenuToggle && submenuParent) {
+        submenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            submenuParent.classList.toggle('open');
+        });
+    }
+
+    // Close menu on button click (except sub menu toggler)
+    const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
     mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(event) {
+            if (this.classList.contains('submenu-toggle')) {
+                // sub-menu toggle uses own handler
+                return;
+            }
             mobileMenu.classList.remove('active');
+            mobileMenu.style.display = 'none';
             mobileMenuBtn.textContent = '☰';
+            if (submenuParent) submenuParent.classList.remove('open');
         });
     });
 
-    // Close mobile menu when clicking outside of it
+    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         const isClickInsideMenu = mobileMenu.contains(event.target);
         const isClickOnButton = mobileMenuBtn.contains(event.target);
-        
         if (!isClickInsideMenu && !isClickOnButton && mobileMenu.classList.contains('active')) {
             mobileMenu.classList.remove('active');
+            mobileMenu.style.display = 'none';
             mobileMenuBtn.textContent = '☰';
+            if (submenuParent) submenuParent.classList.remove('open');
         }
     });
 });

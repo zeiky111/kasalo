@@ -17,6 +17,24 @@
                 <img class="hero-logo" src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Kasalo logo">
 
                 <button class="hero-menu-icon" aria-label="Open menu" type="button">&#9776;</button>
+                <!-- Hamburger Dropdown Menu -->
+                <nav id="mobileMenu" class="mobile-menu" style="display:none;">
+                    <ul>
+                        <li><button class="mobile-nav-link" onclick="location.href='#home'">Home</button></li>
+                        <li><button class="mobile-nav-link" onclick="location.href='#quick-links'">Services</button></li>
+                        <li class="has-submenu">
+                            <button type="button" class="mobile-nav-link submenu-toggle">Menu ▼</button>
+                            <ul class="submenu">
+                                <li><button class="mobile-nav-link" onclick="location.href='#pickup-menu'">Pick Up</button></li>
+                                <li><button class="mobile-nav-link" onclick="location.href='#family-trays'">Kasalo Tray</button></li>
+                                <li><button class="mobile-nav-link" onclick="location.href='#food-party-trays'">Party Tray</button></li>
+                            </ul>
+                        </li>
+                        <li><button class="mobile-nav-link" onclick="location.href='#catering-menu'">Food Catering Package</button></li>
+                        <li><button class="mobile-nav-link" onclick="location.href='#contact'">Order Here</button></li>
+                        <li><button class="mobile-nav-link" onclick="location.href='#contact'">Contact Us</button></li>
+                    </ul>
+                </nav>
 
                 <div class="hero-title-wrap">
                     <h1>Kasalo</h1>
@@ -27,8 +45,8 @@
                     <img class="hero-feature-image" src="020e38cb-e64b-4536-8069-042f23890ddd.jpg" alt="Kasalo featured meals">
                     <div class="hero-quick-actions">
                         <a href="#quick-links">SERVICES</a>
-                        <a href="#quick-links">ORDER NOW</a>
-                        <a href="#quick-links">GALLERY</a>
+                        <a href="#contact" id="orderNowBtn">ORDER NOW</a>
+                        <a href="#gallery">GALLERY</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +60,7 @@
                     </div>
                     <div class="feature-copy">
                         <h3>UberEats, Doordash, Skip the Dishes</h3>
-                        <p>. Order from online food delivery services for solo and family size meals for easy, convient delivery.</p>
+                        <p>Order from online food delivery services for solo and family size meals for easy, convenient delivery.</p>
                     </div>
                 </a>
 
@@ -126,20 +144,27 @@
                             <div class="pickup-item">
                                 <div class="pickup-item-copy">
                                     <h4>NOODLE SOLO</h4>
-                                    <p>can’t or Palabok 4pcs Lumpiang Shanghai (pork spring rolls), sauce.</p>
+                                    <p>Pancit, Palabok, Spaghetti (w/ 4 pcs Lumpiang Shanghai, sauce, good for 1-2)</p>
                                 </div>
                                 <strong>$14.99</strong>
+                            </div>
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>NOODLE SET (3-4 pax)</h4>
+                                    <p>Pancit, Palabok, Spaghetti</p>
+                                </div>
+                                <strong>$25.99</strong>
                             </div>
                         </div>
                     </article>
 
                     <article class="pickup-card">
-                        <h3 class="pickup-card-title">Kasalo Size</h3>
+                        <h3 class="pickup-card-title">Family Size</h3>
                         <p class="pickup-size-note">(3-4 pax)</p>
                         <div class="pickup-items">
-                            <div class="pickup-item"><h4>PANCIT</h4><strong>$30.99</strong></div>
-                            <div class="pickup-item"><h4>PALABOK</h4><strong>$30.99</strong></div>
-                            <div class="pickup-item"><h4>SWEET SPAGHETTI</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>PANCIT</h4><strong>$25.99</strong></div>
+                            <div class="pickup-item"><h4>PALABOK</h4><strong>$25.99</strong></div>
+                            <div class="pickup-item"><h4>SWEET SPAGHETTI</h4><strong>$25.99</strong></div>
                             <div class="pickup-item"><h4>SISIG</h4><strong>$30.99</strong></div>
                             <div class="pickup-item"><h4>KARE-KARE</h4><strong>$30.99</strong></div>
                             <div class="pickup-item"><h4>CHICKEN INASAL</h4><strong>$30.99</strong></div>
@@ -155,17 +180,22 @@
                                 <div class="pickup-item">
                                     <div class="pickup-item-copy">
                                         <h4>EMPANADA</h4>
-                                        <p>4 pcs w/ cheese</p>
+                                        <p>12 pcs: option of chicken w/ cheese, pork w/ cheese, or veggie.</p>
                                     </div>
-                                    <strong>$18.99</strong>
+                                    <strong>$18.00 for 12 pcs</strong>
                                 </div>
 
                                 <div class="pickup-item">
                                     <div class="pickup-item-copy">
-                                        <h4>8 PCS LUMPIA</h4>
-                                        <p>Red, pink, yellow, green, black or white cols</p>
+                                        <h4>LUMPIA</h4>
                                     </div>
-                                    <strong>$10.99</strong>
+                                    <strong>$21.00 for 25 pcs</strong>
+                                </div>
+                                <div class="pickup-item">
+                                    <div class="pickup-item-copy">
+                                        <h4>LUMPIANG SHANGHAI</h4>
+                                    </div>
+                                    <strong>$13.99 for 15 pcs</strong>
                                 </div>
                             </div>
                         </article>
@@ -185,7 +215,7 @@
         <section id="family-trays" class="family-trays-section">
             <div class="family-trays-shell">
                 <header class="family-trays-header">
-                    <h2>Family Trays</h2>
+                    <h2>Kasalo Tray</h2>
                     <p>• MENU •</p>
                     <span>Contact us to order. Available daily.</span>
                 </header>
@@ -243,7 +273,7 @@
         <section id="food-party-trays" class="food-party-section">
             <div class="food-party-shell">
                 <header class="food-party-header">
-                    <h2>Food Party Trays Menu</h2>
+                    <h2>Kasalo Tray Menu</h2>
                     <p>Contact us to order. Minimum 2 days notice.</p>
                 </header>
 
@@ -270,7 +300,12 @@
                                 <div class="menu-item"><span>Dinakdakan</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
                                 <div class="menu-item"><span>Lechon Kawali</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
                                 <div class="menu-item"><span>BBQ Liempo</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                                <div class="menu-item bbq-item"><span>BBQ Stick</span><span>25 pcs: $90</span><span>50 pcs: $175</span><span>75 pcs: $260</span></div>
+                                <div class="menu-item bbq-item">
+                                    <span>BBQ Stick</span>
+                                    <span>25 pcs: $90</span>
+                                    <span>50 pcs: $175</span>
+                                    <span>75 pcs: $260</span>
+                                </div>
                             </div>
                         </div>
 
@@ -625,7 +660,7 @@
                         <input id="name" name="name" type="text" required>
 
                         <label for="eventDateTime">Date + Time of Event/Order *</label>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div class="date-time-grid">
                             <input id="eventDate" name="Event Date" type="date" required>
                             <input id="eventTime" name="Event Time" type="time" required>
                         </div>
