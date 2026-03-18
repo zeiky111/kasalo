@@ -657,11 +657,14 @@
 
                         <label for="name">Name *</label>
                         <input id="name" name="name" type="text" required>
+                        <span id="nameError" class="error-message" aria-live="polite"></span>
 
                         <label for="eventDateTime">Date + Time of Event/Order *</label>
                         <div class="date-time-grid">
                             <input id="eventDate" name="Event Date" type="date" required>
+                            <span id="eventDateError" class="error-message" aria-live="polite"></span>
                             <input id="eventTime" name="Event Time" type="time" required>
+                            <span id="eventTimeError" class="error-message" aria-live="polite"></span>
                         </div>
 
                         <label for="deliveryPickup">For Delivery or Pickup? *</label>
@@ -670,6 +673,7 @@
                             <option value="Delivery">Delivery</option>
                             <option value="Pickup">Pickup</option>
                         </select>
+                        <span id="deliveryPickupError" class="error-message" aria-live="polite"></span>
 
                         <label for="address">Delivery Address (if applicable)</label>
                         <input id="address" name="Delivery Address" type="text">
@@ -688,12 +692,15 @@
                             <option value="UberEats/DoorDash">UberEats/DoorDash</option>
                             <option value="Other">Other</option>
                         </select>
+                        <span id="hearAboutError" class="error-message" aria-live="polite"></span>
 
                         <label for="phone">Phone Number *</label>
                         <input id="phone" name="Phone" type="tel" placeholder="e.g., 604-123-4567" required>
+                        <span id="phoneNumberError" class="error-message" aria-live="polite"></span>
 
                         <label for="email">Email *</label>
                         <input id="email" name="Email" type="email" placeholder="e.g., yourname@email.com" required>
+                        <span id="emailError" class="error-message" aria-live="polite"></span>
 
                         <div id="formStatus" class="form-status" aria-live="polite" role="status"></div>
                         <button type="submit" class="black-button">SEND INQUIRY</button>

@@ -1927,6 +1927,38 @@ main {
     }
 }
 
+.form-status {
+    margin: 12px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 22px;
+}
+
+.form-status.success {
+    color: #1a7b1a;
+}
+
+.form-status.error {
+    color: #c12b2b;
+}
+
+.error-message {
+    display: none;
+    color: #c12b2b;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.error {
+    border-color: #c12b2b;
+    box-shadow: 0 0 0 2px rgba(193, 43, 43, 0.15);
+}
+
 .date-time-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
