@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260318q">
     <link rel="icon" href="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" type="image/jpeg">
 </head>
 <body>
@@ -16,271 +16,540 @@
             <div class="hero-inner">
                 <img class="hero-logo" src="83355588-a15c-4bab-9118-a0e02725d9d1.jpg" alt="Kasalo logo">
 
-                <nav class="hero-nav">
-                    <a href="#about">ABOUT US</a>
-                    <a href="#menu-one">SERVICES</a>
-                    <a href="#gallery">GALLERY</a>
-                    <a href="#contact">CONTACT US</a>
-                </nav>
-
-                <img class="hero-utensil spoon-img" src="Screenshot_2026-03-16_070541-removebg-preview.png" alt="" aria-hidden="true">
-                <img class="hero-utensil fork-img" src="Screenshot_2026-03-16_070555-removebg-preview (1).png" alt="" aria-hidden="true">
+                <button class="hero-menu-icon" aria-label="Open menu" type="button">&#9776;</button>
 
                 <div class="hero-title-wrap">
-                    <h1>KASALO</h1>
-                    <p>Gather - Share - Enjoy</p>
+                    <h1>Kasalo</h1>
+                    <p>Gather Share Enjoy</p>
                 </div>
 
-                <div class="hero-food-stage dramatic">
-                    <figure class="hero-photo photo-tall">
-                        <img src="b804011e-feaf-4b40-b1d3-4b936d2ed0a7.jpg" alt="Assorted spring rolls and dumplings in party trays">
-                    </figure>
-
-                    <figure class="hero-photo photo-wide">
-                        <img src="020e38cb-e64b-4536-8069-042f23890ddd.jpg" alt="Filipino rice bowls with vegetables and sides">
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="content-wrap">
-                <h2>About Us</h2>
-                <p>
-                    Kasalo brings people together through authentic Filipino food made with care and tradition.
-                    Inspired by the Filipino word "kasalo," meaning someone you share a meal with, we serve
-                    comforting Filipino favorites made with quality ingredients perfect for gatherings,
-                    celebrations, or everyday meals.
-                </p>
-
-                <div class="packages-row">
-                    <div class="packages-copy">
-                        <h3>Food<br>Catering<br>Packages</h3>
-                        <a href="#menu-one" class="black-button">VIEW PARTY TRAYS MENU</a>
+                <div class="hero-feature-card">
+                    <img class="hero-feature-image" src="020e38cb-e64b-4536-8069-042f23890ddd.jpg" alt="Kasalo featured meals">
+                    <div class="hero-quick-actions">
+                        <a href="#quick-links">SERVICES</a>
+                        <a href="#quick-links">ORDER NOW</a>
+                        <a href="#quick-links">GALLERY</a>
                     </div>
-
-                    <article class="pkg-card pkg-detail-card">
-                        <h4>Good for 50 pax - $1000</h4>
-                        <ul class="pkg-list">
-                            <li>1 L Beef Dish</li>
-                            <li>100 pcs Lumpiang Shanghai</li>
-                            <li>1 BBQ Liempo/Fish Fillet/Sisig/Dinakdakan/Lechon Kawali</li>
-                            <li>1 L Rice</li>
-                            <li>1 L Noodle dish</li>
-                            <li>3 L dishes</li>
-                            <li>1 Cassava Cake/Biko/Maja Blanca</li>
-                        </ul>
-                        <p class="pkg-free">Free: 1 M Rice + 1 M Salad + Leche Flan</p>
-                    </article>
-
-                    <article class="pkg-card pkg-detail-card">
-                        <h4>Good for 100 pax - $1675</h4>
-                        <ul class="pkg-list">
-                            <li>1 XL Rice</li>
-                            <li>1 XL Noodle dish</li>
-                            <li>2 XL BBQ Liempo/Sisig/Dinakdakan/Lechon Kawali/Fish Fillet</li>
-                            <li>3 XL Dishes</li>
-                            <li>1 XL + 1 M Beef Dishes</li>
-                            <li>200 pcs Lumpia</li>
-                            <li>2x Cassava Cake/Biko/Maja Blanca</li>
-                        </ul>
-                        <p class="pkg-free">Free: 1 XL Rice + 1 XL Salad + Leche Flan</p>
-                    </article>
-
-                    <article class="pkg-card pkg-detail-card">
-                        <h4>Good for 150 pax - $2250</h4>
-                        <ul class="pkg-list">
-                            <li>1 XL Rice</li>
-                            <li>2 XL Noodle dish</li>
-                            <li>1 XL Fish Fillet</li>
-                            <li>1 XL + 1 M BBQ Liempo/Sisig/Dinakdakan/Lechon Kawali</li>
-                            <li>3 XL + 3 M Dishes</li>
-                            <li>1 XL + 1 L Beef Dishes</li>
-                            <li>300 pcs Lumpia</li>
-                            <li>3x Cassava Cake/Biko/Maja Blanca</li>
-                        </ul>
-                        <p class="pkg-free">Free: 2 XL Rice + 2 XL Salad + Leche Flan</p>
-                    </article>
-                </div>
-
-                <div class="packages-notes">
-                    <p><strong>Dish options:</strong> Laing, Chopsuey, Pinakbet, Menudo, Pork Kare-Kare, Bicol Express, Igado, Adobo, Afritada, Caldereta, Pininyahang Manok, Chicken Inasal, Chicken BBQ Legs</p>
-                    <p><strong>Beef options:</strong> Caldereta, Beef Kare-Kare, Beef Broccoli, Beef Mechado</p>
-                    <p><strong>Others:</strong> Chaffing Dish Set - $25 (1 pc chaffing dish, flamming gel, serving spoon, label). 5% GST tax excluded. Delivery/pick up fee and deposit may apply depending on location.</p>
                 </div>
             </div>
         </section>
 
-        <section class="delivery-section">
-            <div class="content-wrap">
-            <h2>UberEats, DoorDash and Skip the Dishes</h2>
+        <section id="quick-links" class="quick-links-section">
+            <div class="quick-links-shell" aria-label="Kasalo quick links">
+                <a href="#order-links" class="feature-card feature-card-link">
+                    <div class="feature-image-wrap">
+                        <img src="ccce4143-8f72-4598-a0d5-e4699ce61144.jpg" alt="UberEats, DoorDash, and Skip the Dishes meals">
+                    </div>
+                    <div class="feature-copy">
+                        <h3>UberEats, Doordash, Skip the Dishes</h3>
+                        <p>. Order from online food delivery services for solo and family size meals for easy, convient delivery.</p>
+                    </div>
+                </a>
 
-                <div class="delivery-grid">
-                    <article class="delivery-card">
-                        <img src="2e20d90a-df1e-4252-9b64-22c6510f2d9a.jpg" alt="Assorted Filipino party trays">
-                        <div class="delivery-caption">
-                            <h4>Party Tray Favorites</h4>
-                            <p>A curated mix of Filipino classics for celebrations, office feasts, and family gatherings.</p>
-                        </div>
-                    </article>
+                <a href="#pickup-menu" class="feature-card feature-card-link">
+                    <div class="feature-image-wrap">
+                        <img src="56a9a53c-9ead-4d4b-b1d6-0f5c0fd2aebb.jpg" alt="Pick-up orders food trays">
+                    </div>
+                    <div class="feature-copy">
+                        <h3>Pick-Up Orders</h3>
+                        <p>Call to order and pick up your meal directly from us to enjoy up to 20% lower fees compared to online delivery services.</p>
+                    </div>
+                </a>
 
-                    <article class="delivery-card">
-                        <img src="56a9a53c-9ead-4d4b-b1d6-0f5c0fd2aebb.jpg" alt="Filipino tray dishes with vegetable sides">
-                        <div class="delivery-caption">
-                            <h4>Classic Filipino Ulam Trays</h4>
-                            <p>Hearty meat and vegetable dishes cooked in rich, homestyle flavors perfect for sharing.</p>
-                        </div>
-                    </article>
+                <a href="#food-party-trays" class="feature-card feature-card-link">
+                    <div class="feature-image-wrap">
+                        <img src="2e20d90a-df1e-4252-9b64-22c6510f2d9a.jpg" alt="Kasalo and party trays">
+                    </div>
+                    <div class="feature-copy">
+                        <h3>Kasalo and Party Trays</h3>
+                        <p>Perfect for gatherings or simple family meals. Contact us to order. We offer both pick-up and direct delivery</p>
+                        <p class="feature-note">*Delivery fee depends on exact location, minimum order of $150.</p>
+                    </div>
+                </a>
 
-                    <article class="delivery-card">
-                        <img src="ccce4143-8f72-4598-a0d5-e4699ce61144.jpg" alt="Classic Filipino rice bowl meal">
-                        <div class="delivery-caption">
-                            <h4>Rice Bowl Meals</h4>
-                            <p>Complete meal bowls with savory proteins, rice, and fresh sides for everyday cravings.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <a class="black-button center" href="#contact">ORDER NOW</a>
+                <a href="#catering-menu" class="feature-card feature-card-link">
+                    <div class="feature-image-wrap">
+                        <img src="b804011e-feaf-4b40-b1d3-4b936d2ed0a7.jpg" alt="Food catering package options">
+                    </div>
+                    <div class="feature-copy">
+                        <h3>Food Catering Packages</h3>
+                        <p>Select from our food catering package options and contact us to discuss your menu and delivery or pick-up options.</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <section id="menu-one" class="menu-page dark-menu">
-            <div class="menu-shell">
-                <div class="menu-left">
+        <section id="pickup-menu" class="pickup-menu-section">
+            <div class="pickup-menu-shell">
+                <header class="pickup-menu-header">
+                    <h2>For Pick-Up</h2>
+                    <p>• MENU •</p>
+                    <span>Call to order and pick up your meal directly from us to enjoy up to 20% lower fees compared to online delivery services.</span>
+                </header>
+
+                <div class="pickup-menu-grid">
+                    <article class="pickup-card solo-card">
+                        <h3 class="pickup-card-title">Solo Set</h3>
+                        <div class="pickup-items">
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>LECHON KAWALI</h4>
+                                    <p>w/ rice, atchara, sauce</p>
+                                </div>
+                                <strong>$15.99</strong>
+                            </div>
+
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>BBQ LIEMPO</h4>
+                                    <p>w/ rice, atchara, sauce</p>
+                                </div>
+                                <strong>$15.99</strong>
+                            </div>
+
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>PORK SISIG</h4>
+                                    <p>w/ rice, egg</p>
+                                </div>
+                                <strong>$15.99</strong>
+                            </div>
+
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>CHICKEN INASAL</h4>
+                                    <p>w/ rice, atchara, chicken oil, sauce</p>
+                                </div>
+                                <strong>$15.99</strong>
+                            </div>
+
+                            <div class="pickup-item">
+                                <div class="pickup-item-copy">
+                                    <h4>NOODLE SOLO</h4>
+                                    <p>can’t or Palabok 4pcs Lumpiang Shanghai (pork spring rolls), sauce.</p>
+                                </div>
+                                <strong>$14.99</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pickup-card">
+                        <h3 class="pickup-card-title">Kasalo Size</h3>
+                        <p class="pickup-size-note">(3-4 pax)</p>
+                        <div class="pickup-items">
+                            <div class="pickup-item"><h4>PANCIT</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>PALABOK</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>SWEET SPAGHETTI</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>SISIG</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>KARE-KARE</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>CHICKEN INASAL</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>BBQ LIEMPO</h4><strong>$30.99</strong></div>
+                            <div class="pickup-item"><h4>LECHON KAWALI</h4><strong>$36.00</strong></div>
+                        </div>
+                    </article>
+
+                    <div class="pickup-stack">
+                        <article class="pickup-card compact sides-card">
+                            <h3 class="pickup-card-title">Appetizer</h3>
+                            <div class="pickup-items">
+                                <div class="pickup-item">
+                                    <div class="pickup-item-copy">
+                                        <h4>EMPANADA</h4>
+                                        <p>4 pcs w/ cheese</p>
+                                    </div>
+                                    <strong>$18.99</strong>
+                                </div>
+
+                                <div class="pickup-item">
+                                    <div class="pickup-item-copy">
+                                        <h4>8 PCS LUMPIA</h4>
+                                        <p>Red, pink, yellow, green, black or white cols</p>
+                                    </div>
+                                    <strong>$10.99</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="pickup-card compact">
+                            <h3 class="pickup-card-title">Sides</h3>
+                            <div class="pickup-items">
+                                <div class="pickup-item"><h4>RICE</h4><strong>$3.00</strong></div>
+                                <div class="pickup-item"><h4>ATCHARA</h4><strong>$4.00</strong></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="family-trays" class="family-trays-section">
+            <div class="family-trays-shell">
+                <header class="family-trays-header">
+                    <h2>Family Trays</h2>
+                    <p>• MENU •</p>
+                    <span>Contact us to order. Available daily.</span>
+                </header>
+
+                <article class="family-trays-box">
+                    <h3 class="family-trays-title">Good for 4-6 pax</h3>
+                    
+                    <div class="family-trays-items">
+                        <div class="family-trays-column">
+                            <div class="family-item">
+                                <h4>10 PCS LUMPIANG TOGE</h4>
+                                <strong>$17.00</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>25 PCS LUMPIANG SHANGHAI</h4>
+                                <strong>$21.00</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>PALABOK</h4>
+                                <strong>$32.99</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>PANCIT BIHON</h4>
+                                <strong>$32.99</strong>
+                            </div>
+                        </div>
+
+                        <div class="family-trays-column">
+                            <div class="family-item">
+                                <h4>PORK KARE KARE</h4>
+                                <strong>$37.99</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>CHICKEN INASAL</h4>
+                                <strong>$40.00</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>PORK SISIG</h4>
+                                <strong>$42.99</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>PORK BBQ LIEMPO</h4>
+                                <strong>$42.99</strong>
+                            </div>
+                            <div class="family-item">
+                                <h4>BEEF KARE KARE</h4>
+                                <strong>$47.99</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="food-party-trays" class="food-party-section">
+            <div class="food-party-shell">
+                <header class="food-party-header">
                     <h2>Food Party Trays Menu</h2>
+                    <p>Contact us to order. Minimum 2 days notice.</p>
+                </header>
 
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>PORK</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                <div class="food-party-content">
+                    <div class="food-party-menu">
+                        <div class="menu-category">
+                            <h3 class="category-title">PORK</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Laing</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Chopsuey</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Pinakbet</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Menudo</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Kare-Kare</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Bicol Express</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Igado</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Adobo</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Sisig</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                                <div class="menu-item"><span>Dinakdakan</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                                <div class="menu-item"><span>Lechon Kawali</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                                <div class="menu-item"><span>BBQ Liempo</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                                <div class="menu-item bbq-item"><span>BBQ Stick</span><span>25 pcs: $90</span><span>50 pcs: $175</span><span>75 pcs: $260</span></div>
+                            </div>
                         </div>
-                        <div class="menu-line"><span>Laing</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Chopsuey</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Pinakbet</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Menudo</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Kare-Kare</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Bicol Express</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Igado</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Adobo</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Sisig</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                        <div class="menu-line"><span>Dinakdakan</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                        <div class="menu-line"><span>Lechon Kawali</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                        <div class="menu-line"><span>BBQ Liempo</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                        <div class="menu-line bbq-stick-line"><span>BBQ Stick</span><span>25 pcs: $90</span><span>50 pcs: $175</span><span>75 pcs: $260</span><span>-</span></div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">CHICKEN</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Afritada</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Caldereta</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Chopsuey</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Pininyahang Manok</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Chicken Inasal</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Chicken BBQ Legs</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Fried Chicken</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Cordon Bleu</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">BEEF</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Caldereta</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
+                                <div class="menu-item"><span>Kare-Kare</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
+                                <div class="menu-item"><span>Beef Broccoli</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
+                                <div class="menu-item"><span>Beef Mechado</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-footer-section">
+                            <div class="footer-content">
+                                <div class="sizes-info">
+                                    <span class="sizes-label">SIZES</span>
+                                    <div class="sizes-list">
+                                        <p class="size-row"><span>Small - 10 IN x 13 IN x 1.5 IN</span><em>(8 - 12 pax)</em></p>
+                                        <p class="size-row"><span>Medium - 10 IN x 13 IN x 2.5 IN</span><em>(12 - 20 pax)</em></p>
+                                        <p class="size-row"><span>Large - 13 IN x 21 IN x 1.5 IN</span><em>(20 - 30 pax)</em></p>
+                                        <p class="size-row"><span>XLarge - 13 IN x 21 IN x 2.5 IN</span><em>(30 - 45 pax)</em></p>
+                                    </div>
+                                </div>
+                                <div class="legal-info">
+                                    <p>Fully Licensed</p>
+                                    <p>Fraser Health Food Safety Certificate</p>
+                                    <p>Caution: May contain allergens.</p>
+                                    <p class="tax-note">* 5% GST TAX EXCLUDED</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>CHICKEN</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
-                        </div>
-                        <div class="menu-line"><span>Afritada</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Caldereta</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Chopsuey</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Pininyahang Manok</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Chicken Inasal</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Chicken BBQ Legs</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Fried Chicken</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Cordon Bleu</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>BEEF</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
-                        </div>
-                        <div class="menu-line"><span>Caldereta</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
-                        <div class="menu-line"><span>Kare-Kare</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
-                        <div class="menu-line"><span>Beef Broccoli</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
-                        <div class="menu-line"><span>Beef Mechado</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
-                    </div>
-
-                    <div class="menu-footnote">
-                        <p><strong>SIZES</strong> Small 10 in x 13 in x 1.5 in (8-12 pax) | Medium 10 in x 13 in x 2.5 in (12-20 pax) | Large 13 in x 21 in x 1.5 in (20-30 pax) | XLarge 13 in x 21 in x 2.5 in (30-45 pax)</p>
-                        <p>Fully Licensed | Fraser Health Food Safety Certificate | Caution: May contain allergens | +5% GST TAX EXCLUDED</p>
+                    <div class="food-party-images">
+                        <img src="6f7410ef-9452-44f3-87e4-985787d15d65.jpg" alt="Food Party Trays dish 1" class="party-img">
+                        <img src="ab0564b9-99b6-4e4c-9fb7-971f51f4c922.jpg" alt="Food Party Trays dish 2" class="party-img">
+                        <img src="dc86277a-800c-4342-b79e-14aca04e9536.jpg" alt="Food Party Trays dish 3" class="party-img">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="menu-two" class="menu-page dark-menu">
-            <div class="menu-shell reverse">
-                <div class="menu-left">
+        <section id="food-party-trays-2" class="food-party-section">
+            <div class="food-party-shell">
+                <header class="food-party-header">
                     <h2>Food Party Trays Menu</h2>
+                    <p>Contact us to order. Minimum 2 days notice.</p>
+                </header>
 
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>VEGETARIAN</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                <div class="food-party-content">
+                    <div class="food-party-menu">
+                        <div class="menu-category">
+                            <h3 class="category-title">VEGETARIAN</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Pancit</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
+                                <div class="menu-item"><span>Pinakbet</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Chopseuy</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item"><span>Mixed Veggies with Tofu</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
+                                <div class="menu-item one-col"><span>Lumpiang Togue</span><span>$55 for 35 pcs</span></div>
+                                <div class="menu-item one-col"><span>Lumpiang Sariwa</span><span>$65 (15 pcs.) / $190 (50 pcs.)</span></div>
+                                <div class="menu-item one-col"><span>Empanada</span><span>$1.50 each (min. 12 pcs)</span></div>
+                            </div>
                         </div>
-                        <div class="menu-line"><span>Pancit</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
-                        <div class="menu-line"><span>Chopsuey</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Pinakbet</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line"><span>Mixed Veggies with Tofu</span><span>$75</span><span>$95</span><span>$135</span><span>$175</span></div>
-                        <div class="menu-line one-col"><span>Lumpiang Togue</span><span>$55 for 35 pcs</span></div>
-                        <div class="menu-line one-col"><span>Lumpiang Sariwa</span><span>$65 (15 pcs) / $190 (50 pcs)</span></div>
-                        <div class="menu-line one-col"><span>Empanada</span><span>$1.50 each (min. 12 pcs)</span></div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">SEAFOOD</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Fish Fillet with tartar sauce</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
+                                <div class="menu-item"><span>Garlic Butter Shrimp</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
+                                <div class="menu-size-header pieces-header">
+                                    <span>1 PC</span>
+                                    <span>2 PCS</span>
+                                    <span>4 PCS</span>
+                                    <span>5 PCS</span>
+                                </div>
+                                <div class="menu-item"><span>Inihaw an Tilapia</span><span>$40</span><span>$75</span><span>$140</span><span>$170</span></div>
+                                <div class="menu-item"><span>Inihaw na Bangus</span><span>$50</span><span>$85</span><span>$150</span><span>$180</span></div>
+                                <div class="menu-item"><span>Sweet and Sour Tilapia</span><span>$40</span><span>$75</span><span>$140</span><span>$170</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">NOODLES</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Pancit Bihon</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
+                                <div class="menu-item"><span>Pancit Bihon Canton</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
+                                <div class="menu-item"><span>Palabok</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
+                                <div class="menu-item"><span>Filipino Spaghetti</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
+                                <div class="menu-item"><span>Filipino Carbonara</span><span>-</span><span>$85</span><span>$120</span><span>$150</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">APPETIZER</h3>
+                            <div class="menu-items">
+                                <div class="menu-item one-col"><span>Lumpiang Shanghai</span><span>$40 for 50 pcs</span></div>
+                                <div class="menu-item one-col"><span>Embutido</span><span>$50 for 5 pcs</span></div>
+                                <div class="menu-item one-col"><span>Lumpiang Togue Pork</span><span>$55 for 35 pcs</span></div>
+                                <div class="menu-item one-col"><span>Lumpiang Sariwa Pork</span><span>$65 for 15 pcs / $190 for 50 pcs</span></div>
+                                <div class="menu-item one-col"><span>Empanada (Chicken/pork)</span><span>$1.50 each (min. 12 pcs)</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <div class="category-title-row">
+                                <h3 class="category-title">DESSERT</h3>
+                                <span class="category-note">10 IN X 13 IN X 1.5 IN</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item one-col"><span>Biko w/ Latik Syrup</span><span>$40</span></div>
+                                <div class="menu-item one-col"><span>Cassava cake</span><span>$40</span></div>
+                                <div class="menu-item one-col"><span>Maja Blanca</span><span>$40</span></div>
+                                <div class="menu-item one-col"><span>Puto cheese</span><span>$40</span></div>
+                                <div class="menu-item one-col"><span>Leche Flan (min. 6 pcs)</span><span>$50 (6 pcs)</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h3 class="category-title">OTHERS</h3>
+                            <div class="menu-size-header">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="menu-items">
+                                <div class="menu-item"><span>Steamed Rice</span><span>$15</span><span>$25</span><span>$35</span><span>$45</span></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-footer-section legal-only-footer">
+                            <div class="legal-info">
+                                <p>Fully Licensed</p>
+                                <p>Fraser Health Food Safety Certificate.</p>
+                                <p>Caution: May contain allergens.</p>
+                                <p class="tax-note">* 5% GST TAX EXCLUDED</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>SEAFOOD</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
-                        </div>
-                        <div class="menu-line"><span>Fish Fillet</span><span>$85</span><span>$105</span><span>$145</span><span>$185</span></div>
-                        <div class="menu-line"><span>Garlic Butter Shrimp</span><span>$95</span><span>$145</span><span>$175</span><span>$205</span></div>
-                        <div class="menu-line"><span>Inihaw na Tilapia</span><span>$40</span><span>$75</span><span>$140</span><span>$170</span></div>
-                        <div class="menu-line"><span>Inihaw na Bangus</span><span>$50</span><span>$85</span><span>$150</span><span>$180</span></div>
-                        <div class="menu-line"><span>Sweet and Sour Tilapia</span><span>$40</span><span>$75</span><span>$140</span><span>$170</span></div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>NOODLES</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
-                        </div>
-                        <div class="menu-line"><span>Pancit Bihon</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
-                        <div class="menu-line"><span>Pancit Bihon Canton</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
-                        <div class="menu-line"><span>Palabok</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
-                        <div class="menu-line"><span>Filipino Spaghetti</span><span>$65</span><span>$85</span><span>$120</span><span>$150</span></div>
-                        <div class="menu-line"><span>Filipino Carbonara</span><span>-</span><span>$85</span><span>$120</span><span>$150</span></div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="menu-head no-sizes">
-                            <h3>APPETIZER</h3>
-                        </div>
-                        <div class="menu-line one-col"><span>Lumpiang Shanghai</span><span>$40 for 50 pcs</span></div>
-                        <div class="menu-line one-col"><span>Embutido</span><span>$50 for 5 pcs</span></div>
-                        <div class="menu-line one-col"><span>Lumpiang Togue Pork</span><span>$55 for 35 pcs</span></div>
-                        <div class="menu-line one-col"><span>Lumpiang Sariwa Pork</span><span>$65 for 15 pcs / $190 for 50 pcs</span></div>
-                        <div class="menu-line one-col"><span>Empanada (Chicken/Pork)</span><span>$1.50 each (min. 12 pcs)</span></div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="menu-head no-sizes">
-                            <h3>DESSERT (10 in x 13 in x 1.5 in)</h3>
-                        </div>
-                        <div class="menu-line one-col"><span>Biko w/ Latik Syrup</span><span>$40</span></div>
-                        <div class="menu-line one-col"><span>Cassava Cake</span><span>$40</span></div>
-                        <div class="menu-line one-col"><span>Maja Blanca</span><span>$40</span></div>
-                        <div class="menu-line one-col"><span>Puto Cheese</span><span>$40</span></div>
-                        <div class="menu-line one-col"><span>Leche Flan</span><span>$50 (6 pcs)</span></div>
-                    </div>
-
-                    <div class="menu-block">
-                        <div class="menu-head">
-                            <h3>OTHERS</h3>
-                            <span>S</span><span>M</span><span>L</span><span>XL</span>
-                        </div>
-                        <div class="menu-line"><span>Steamed Rice</span><span>$15</span><span>$25</span><span>$35</span><span>$45</span></div>
-                    </div>
-
-                    <div class="menu-footnote">
-                        <p>Fully Licensed | Fraser Health Food Safety Certificate | Caution: May contain allergens | +5% GST TAX EXCLUDED</p>
+                    <div class="food-party-images">
+                        <img src="em.png" alt="Kasalo Pinoy Catering logo" class="party-img">
+                        <img src="d9be696d-4d61-4896-9377-20de9dda782d.jpg" alt="Food Party Trays dish 4" class="party-img">
+                        <img src="1fed2672-560f-4aae-8a73-6cdb111d6354.jpg" alt="Food Party Trays dish 5" class="party-img">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="catering-menu" class="catering-menu-section">
+            <div class="catering-menu-shell">
+                <header class="catering-menu-header">
+                    <h2>Food Catering Menu</h2>
+                </header>
+
+                <div class="catering-cards">
+                    <article class="catering-card">
+                        <div class="catering-card-inner">
+                            <p class="package-price">$1000</p>
+                            <p class="package-pax">&bull; 50 PAX &bull;</p>
+                            <div class="package-columns">
+                                <ul>
+                                    <li>1 L Beef Dish</li>
+                                    <li>100 pcs Lumpiang Shanghai</li>
+                                    <li>1 BBQ Liempo/Fish<br>Fillet/Sisig/Dinakdakan/Lechon Kawali</li>
+                                </ul>
+                                <ul>
+                                    <li>1 L Rice</li>
+                                    <li>1 L Noodle dish</li>
+                                    <li>3 L dishes</li>
+                                    <li>1 Cassava Cake/Biko/Maja Blanca</li>
+                                </ul>
+                            </div>
+                            <p class="package-free">Free: 1 M Rice + 1 M Salad + Leche Flan</p>
+                        </div>
+                    </article>
+
+                    <article class="catering-card">
+                        <div class="catering-card-inner">
+                            <p class="package-price">$1675</p>
+                            <p class="package-pax">&bull; 100 PAX &bull;</p>
+                            <div class="package-columns">
+                                <ul>
+                                    <li>1 XL Rice</li>
+                                    <li>1 XL Noodle dish</li>
+                                    <li>2 XL BBQ<br>Liempo/Sisig/Dinakdakan/Lechon Kawali/Fish Fillet</li>
+                                </ul>
+                                <ul>
+                                    <li>3 XL Dishes</li>
+                                    <li>1 XL + 1 M Beef Dishes</li>
+                                    <li>200 pcs Lumpia</li>
+                                    <li>2x Cassava<br>Cake/Biko/Maja Blanca</li>
+                                </ul>
+                            </div>
+                            <p class="package-free">Free: 1 XL Rice + 1 XL Salad + Leche Flan</p>
+                        </div>
+                    </article>
+
+                    <article class="catering-card">
+                        <div class="catering-card-inner">
+                            <p class="package-price">$2250</p>
+                            <p class="package-pax">&bull; 150 PAX &bull;</p>
+                            <div class="package-columns">
+                                <ul>
+                                    <li>1 XL Rice</li>
+                                    <li>2 XL Noodle dish</li>
+                                    <li>1 XL Fish Fillet</li>
+                                    <li>1 XL + 1 M BBQ<br>Liempo/Sisig/Dinakdakan/Lechon Kawali</li>
+                                </ul>
+                                <ul>
+                                    <li>3 XL + 3 M Dishes</li>
+                                    <li>1 XL + 1 L Beef Dishes</li>
+                                    <li>300 pcs Lumpia</li>
+                                    <li>3x Cassava<br>Cake/Biko/Maja Blanca</li>
+                                </ul>
+                            </div>
+                            <p class="package-free">Free: 2 XL Rice + 2 XL Salad + Leche Flan</p>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="catering-notes-card">
+                    <div class="catering-notes-inner">
+                        <div class="catering-notes">
+                            <p>*Dishes options includes: Laing, Chopseuy, Pinakbet, Menudo, Pork Kare-Kare, Bicol Express, Igado, Adobo, Afritada, Caldereta, Pininyahang Manok, Chicken Inasal,<br>Chicken BBQ Legs</p>
+                            <p>*Beef Dishes options: Caldereta, Beef Kare-Kare, Beef Broccoli, Beef Mechado</p>
+                            <p>Any other dishes are available with additional fee.</p>
+                            <p>*Caution: May Contain Allergens</p>
+                            <p class="chafing-title">Chaffing Dish Set - $25</p>
+                            <p>1 pc chaffing dish, flamming gel, serving spoon, label</p>
+                            <p>*Delivery/pick up fee and deposit may apply depending on location</p>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -290,17 +559,17 @@
                 <div class="polaroid-grid">
                     <figure class="polaroid"><img src="08ecb475-e87c-4467-a268-39c38ddd874a.jpg" alt="Kasalo gallery photo 1"></figure>
                     <figure class="polaroid"><img src="278da739-a887-4e72-aa8a-dab4946bc455.jpg" alt="Kasalo gallery photo 2"></figure>
-                    <figure class="polaroid"><img src="2ad764e5-7fa8-4f7b-a3be-80e11f9c02e1.jpg" alt="Kasalo gallery photo 3"></figure>
+                    <figure class="polaroid"><img src="52f965b1-0943-4f61-a944-4d16ad1d21f6.jpg" alt="Kasalo gallery photo 3"></figure>
                     <figure class="polaroid"><img src="43389502-86d4-4e2a-add9-a1ee22943f18.jpg" alt="Kasalo gallery photo 4"></figure>
                     <figure class="polaroid"><img src="4bdf3b41-2864-432d-97f2-14d5908858b8.jpg" alt="Kasalo gallery photo 5"></figure>
                     <figure class="polaroid"><img src="525bc84e-f8a8-400e-9be0-ec0fea1ce677.jpg" alt="Kasalo gallery photo 6"></figure>
                     <figure class="polaroid"><img src="5d45bb7a-1042-4c3c-8148-6fb1124bc75d.jpg" alt="Kasalo gallery photo 7"></figure>
                     <figure class="polaroid"><img src="6a080906-62b6-4d83-b2d5-b051f4b0a43d.jpg" alt="Kasalo gallery photo 8"></figure>
-                    <figure class="polaroid"><img src="8eab3a67-7b12-4579-9b67-4899ae1d838d.jpg" alt="Kasalo gallery photo 10"></figure>
+                    <figure class="polaroid"><img src="107270a4-7131-485e-82eb-de5a3c761fb0.jpg" alt="Kasalo gallery photo 10"></figure>
                     <figure class="polaroid"><img src="9bcddddd-8ad4-46e2-993f-47eb58cf575b.jpg" alt="Kasalo gallery photo 11"></figure>
                     <figure class="polaroid"><img src="b86eb822-b207-4820-aa7b-29fdd737ffba.jpg" alt="Kasalo gallery photo 13"></figure>
                     <figure class="polaroid"><img src="bb94c7d5-7fca-4795-a048-ba30ed66c677.jpg" alt="Kasalo gallery photo 14"></figure>
-                    <figure class="polaroid"><img src="e564482a-0259-47e2-a9af-213f3f9bc315.jpg" alt="Kasalo gallery photo 16"></figure>
+                    <figure class="polaroid"><img src="bd4757cb-8b46-4d1f-bdda-8c4bf6e85298.jpg" alt="Kasalo gallery photo 16"></figure>
                     <figure class="polaroid"><img src="f12a8cc5-50bf-48df-97e1-a17713bd286a.jpg" alt="Kasalo gallery photo 17"></figure>
                 </div>
             </div>
@@ -337,12 +606,12 @@
                         </a>
                     </p>
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.4305066764614!2d-122.66046352466564!3d49.1164584825123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d1d67c295ac1%3A0xa020a37001ec4371!2s20381%2062%20Ave%20Unit%20301%2C%20Langley%2C%20BC%20V3A%205E6%2C%20Canada!5e0!3m2!1sen!2sph!4v1772920541041!5m2!1sen!2sph" 
-                        width="100%" 
-                        height="260" 
-                        style="border:0; border-radius: 8px; margin-top: 18px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.4305066764614!2d-122.66046352466564!3d49.1164584825123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d1d67c295ac1%3A0xa020a37001ec4371!2s20381%2062%20Ave%20Unit%20301%2C%20Langley%2C%20BC%20V3A%205E6%2C%20Canada!5e0!3m2!1sen!2sph!4v1772920541041!5m2!1sen!2sph"
+                        width="100%"
+                        height="260"
+                        style="border:0; border-radius: 8px; margin-top: 18px;"
+                        allowfullscreen=""
+                        loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </article>
 
@@ -351,7 +620,7 @@
                     <form id="contactForm" action="https://formsubmit.co/kasalopinoy@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="#contact">
-                        
+
                         <label for="name">Name *</label>
                         <input id="name" name="name" type="text" required>
 
@@ -401,33 +670,30 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-brand">
+            <a href="#contact" class="footer-column footer-brand">
                 <h3>KASALO</h3>
                 <p>Gather - Share - Enjoy</p>
-            </div>
+            </a>
 
-            <nav class="footer-links" aria-label="Footer navigation">
-                <a href="#about">About Us</a>
-                <a href="#menu-one">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <a href="#quick-links" class="footer-column footer-links-col">
+                <h4>Services</h4>
+                <span class="footer-link-item">Quick Links</span>
+                <span class="footer-link-item">View Menus</span>
+                <span class="footer-link-item">Browse Gallery</span>
+            </a>
 
-            <div class="footer-contact">
-                <a href="mailto:kasalopinoy@gmail.com">kasalopinoy@gmail.com</a>
-                <a href="tel:+16044455178">604-445-5178</a>
-                <a href="https://www.instagram.com/kasalo.pinoy" target="_blank" rel="noopener noreferrer">
-                    <img class="social-icon social-icon-footer" src="https://cdn.simpleicons.org/instagram/FFFFFF" alt="Instagram logo">
-                    <span>Instagram: @kasalo.pinoy</span>
-                </a>
-                <a href="https://www.facebook.com/search/top?q=Kasalo%20Pinoy" target="_blank" rel="noopener noreferrer">
-                    <img class="social-icon social-icon-footer" src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="Facebook logo">
-                    <span>Facebook: Kasalo Pinoy</span>
-                </a>
-                <a href="https://www.tiktok.com/@kasalo.pinoy" target="_blank" rel="noopener noreferrer">
-                    <img class="social-icon social-icon-footer" src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="TikTok logo">
-                    <span>TikTok: @kasalo.pinoy</span>
-                </a>
+            <a href="#contact" class="footer-column footer-contact-col">
+                <h4>Contact</h4>
+                <span class="footer-contact-item">kasalopinoy@gmail.com</span>
+                <span class="footer-contact-item">604-445-5178</span>
+                <span class="footer-contact-item">Follow Us Online</span>
+            </a>
+
+            <div id="order-links" class="footer-column footer-delivery-col">
+                <h4>Order Online</h4>
+                <a href="https://www.ubereats.com/store-browse-uuid/8087ca65-f5a7-5b81-b7a9-dddc1d3d70cb?diningMode=DELIVERY" target="_blank" rel="noopener noreferrer" class="footer-link-item delivery-link-copy">Uber eats: Try Kasalo on Uber Eats and use my code for a discount on your first order</a>
+                <a href="https://www.doordash.com/store/33037393?utm_source=mx_share&aw=buw8DDY5P8WF2GZp" target="_blank" rel="noopener noreferrer" class="footer-link-item delivery-link-copy">Check out Kasalo Pinoy on DoorDash</a>
+                <span class="footer-link-item coming-soon">Skip the Dishes - Coming Soon</span>
             </div>
         </div>
         <p class="footer-copy">Copyright 2026 Kasalo Catering. All rights reserved.</p>
