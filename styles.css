@@ -57,10 +57,15 @@ main {
     top: 10px;
     left: 10px;
     width: clamp(80px, 7.5vw, 110px);
+    min-width: 80px;
+    max-width: 110px;
     height: clamp(80px, 7.5vw, 110px);
+    min-height: 80px;
+    max-height: 110px;
     border-radius: 50%;
     object-fit: cover;
     z-index: 6;
+    flex-shrink: 0;
 }
 
 .hero-menu-icon {
@@ -794,7 +799,7 @@ main {
 }
 
 .family-item strong {
-    font-size: clamp(18px, 1.2vw, 24px);
+    font-size: clamp(20px, 1.4vw, 24px);
     line-height: 1;
     color: #1a1a1a;
     letter-spacing: 0.6px;
@@ -1964,4 +1969,17 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
+
+.date-time-grid input,
+.date-time-grid select {
+    width: 100%;
+    min-width: 0;
+}
+
+@media (max-width: 560px) {
+    .date-time-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
