@@ -9,22 +9,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobileMenu');
     if (!mobileMenuBtn || !mobileMenu) return;
 
+    function updateMobileMenuOverflow() {
+        const needsScroll = mobileMenu.scrollHeight > mobileMenu.clientHeight;
+        mobileMenu.style.overflowY = needsScroll ? 'auto' : 'hidden';
+    }
+
     // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', function() {
+        const isActive = !mobileMenu.classList.contains('active');
         mobileMenu.classList.toggle('active');
-        mobileMenu.style.display = mobileMenu.classList.contains('active') ? 'flex' : 'none';
-        mobileMenuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        mobileMenu.style.display = isActive ? 'flex' : 'none';
+        mobileMenuBtn.textContent = isActive ? '✕' : '☰';
+        document.body.classList.toggle('no-scroll', isActive);
+        document.documentElement.classList.toggle('no-scroll', isActive);
+        if (isActive) {
+            updateMobileMenuOverflow();
+        }
     });
 
-    // Dropdown submenu toggle
-    const submenuToggle = mobileMenu.querySelector('.submenu-toggle');
-    const submenuParent = submenuToggle ? submenuToggle.closest('li') : null;
-    if (submenuToggle && submenuParent) {
-        submenuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            submenuParent.classList.toggle('open');
-        });
+    function refreshMobileMenuState() {
+        if (mobileMenu.classList.contains('active')) {
+            updateMobileMenuOverflow();
+        }
     }
+
+    // Dropdown submenu toggle (mobile + laptop unified)
+    const submenuToggles = mobileMenu.querySelectorAll('.submenu-toggle');
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const parentLi = this.closest('li');
+            if (!parentLi) return;
+
+            // Close any other open submenu siblings before opening this one
+            mobileMenu.querySelectorAll('li.has-submenu.open').forEach(openLi => {
+                if (openLi !== parentLi) {
+                    openLi.classList.remove('open');
+                }
+            });
+
+            parentLi.classList.toggle('open');
+            refreshMobileMenuState();
+        });
+    });
 
     // Close menu on button click (except sub menu toggler)
     const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
@@ -37,7 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.remove('active');
             mobileMenu.style.display = 'none';
             mobileMenuBtn.textContent = '☰';
-            if (submenuParent) submenuParent.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
+            mobileMenu.querySelectorAll('li.has-submenu.open').forEach(openLi => {
+                openLi.classList.remove('open');
+            });
         });
     });
 
@@ -46,11 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const isClickInsideMenu = mobileMenu.contains(event.target);
         const isClickOnButton = mobileMenuBtn.contains(event.target);
         if (!isClickInsideMenu && !isClickOnButton && mobileMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            mobileMenu.style.display = 'none';
-            mobileMenuBtn.textContent = '☰';
-            if (submenuParent) submenuParent.classList.remove('open');
-        }
+                mobileMenu.classList.remove('active');
+                mobileMenu.style.display = 'none';
+                mobileMenuBtn.textContent = '☰';
+                document.body.classList.remove('no-scroll');
+                document.documentElement.classList.remove('no-scroll');
+                mobileMenu.querySelectorAll('li.has-submenu.open').forEach(openLi => {
+                    openLi.classList.remove('open');
+                });
+            }
     });
 });
 
